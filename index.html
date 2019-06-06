@@ -15,7 +15,7 @@
 		src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 		crossorigin="anonymous"></script>
-		
+
 		<script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.js"></script>
 		
 
@@ -59,10 +59,10 @@
 
 
 									<div class="mermaid">
-										graph LR
-											A --- B
-											B-->C[fa:fa-ban forbidden]
-											B-->D(fa:fa-spinner);
+										graph TD;
+											id1(Start) --> id2(Finish);
+											click id1 clickHandler;
+											click id2 "testing.html";
 									</div>
 							
 								</section>
@@ -179,6 +179,13 @@
 			$(document).load(function() {
 				mermaid.initialize();
 			});
+			</script>
+
+			<script>
+			
+			const clickHandler = function(){
+				alert("You clicked an object");
+			}
 			</script>
 
 	</body>
