@@ -10,13 +10,13 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-
-		<script src="jquery-3.4.0.min.js"></script><script
+		
+		<script
 		src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 		crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.min.js"></script>
-		<script>mermaid.initialize({startOnLoad:true});</script>
+		
 
 	</head>
 	<body class="is-preload">
@@ -174,7 +174,11 @@
 			<script src="assets/js/main.js"></script>
 			<!-- flows-->
 
-			<script>$(document).load(function() {
+			<script>
+			
+			//mermaid.initialize({startOnLoad:true});
+
+			$(document).load(function() {
 				mermaid.initialize();
 			});
 			</script>
