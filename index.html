@@ -20,7 +20,7 @@
 					<div id="main">
 						<div class="inner">
 
-							<!-- Header -->
+							<!-- Header would make this as a resource-->
 								<header id="header">
 									<a href="index.html" class="logo"><strong>Test Site</strong> by Daniel Tilley</a>
 									<ul class="icons">
@@ -32,7 +32,7 @@
 									</ul>
 								</header>
 
-							<!-- Banner -->
+							<!-- Banner don-->
 								<section id="banner">
 									<div class="content">
 										<header>
@@ -48,45 +48,19 @@
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Erat lacinia</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-diamond"></span>
-											<div class="content">
-												<h3>Portitor ullamcorper</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon fa-paper-plane"></span>
-											<div class="content">
-												<h3>Sapien veroeros</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon fa-rocket"></span>
-											<div class="content">
-												<h3>Quam lorem ipsum</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-										<article>
-											<span class="icon fa-signal"></span>
-											<div class="content">
-												<h3>Sed magna finibus</h3>
-												<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-											</div>
-										</article>
-									</div>
-								</section>
-
-							<!-- Section -->
-								<section>
-									<header class="major">
 										<h2>Ipsum sed dolor</h2>
 									</header>
+
+
+									<div class="mermaid">
+										graph LR
+											A --- B
+											B-->C[fa:fa-ban forbidden]
+											B-->D(fa:fa-spinner);
+									</div>
+
+
+
 									<div class="posts">
 										<article>
 											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
@@ -242,6 +216,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<!-- flows-->
+			<script src="mermaid.min.js"></script>
+			<script>mermaid.initialize({startOnLoad:true});</script>
 
 	</body>
 </html>
