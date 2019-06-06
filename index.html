@@ -67,8 +67,8 @@
 									<div class="mermaid">
 										graph TD;
 											id1(Start) --> id2(Finish);
-											click id1 clickHandler;
-											click id2 "testing.html";
+											click id1 callback
+											click id2 "testing.html"
 											classDef default fill:#f9f,stroke:#999,stroke-width:7px;
 									</div>
 							
@@ -190,7 +190,7 @@
 
 			<script>
 			
-			const clickHandler = function(){
+			const callback = function(){
 				alert("You clicked an object");
 			}
 			</script>
