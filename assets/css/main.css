@@ -135,6 +135,7 @@ input, select, textarea {
 
 			body, input, select, textarea {
 				font-size: 10pt;
+				text-align: center;
 			}
 
 		}

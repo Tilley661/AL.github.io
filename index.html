@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Editorial by HTML5 UP</title>
+		<title>Test site</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -20,9 +20,12 @@
 
 		<style>
 				.ameyStandard > rect{
-					fill:#ebb700;
-					stroke:black;
-					stroke-width:4px;
+					fill:#ebb700 !important;
+					stroke:black !important;
+					stroke-width:1px !important;
+				}
+				.ameyStandard .label{
+					text-align: center
 				}
 			</style>
 	</head>
@@ -51,8 +54,7 @@
 								<section id="banner">
 									<div class="content">
 										<header>
-											<h1>Header<br />
-											<p>Responsive</p>
+											<h1>Testing Ground<br />
 										</header>
 									</div>
 								</section>
@@ -60,20 +62,8 @@
 							<!-- Section -->
 								<section>
 									<header class="major">
-										<h2>Example Flow</h2>
+										<h2><a href="firstflow.html">Click to go to example flow</a></h2>
 									</header>
-
-
-									<div class="mermaid">
-										graph TD;
-											id1(Start) --> id2(test click)
-											id2 --> id3(test another)
-											id3 --> id4(Finish);
-
-											click id1 callback
-											click id2 "testing.html"
-											class id1,id2,id3,id4 ameyStandard
-									</div>
 							
 								</section>
 
@@ -184,7 +174,7 @@
 
 			<script>
 			
-			//mermaid.initialize({startOnLoad:true});
+			mermaid.initialize({startOnLoad:true});
 
 			$(document).load(function() {
 				mermaid.initialize();
@@ -192,9 +182,23 @@
 			</script>
 
 			<script>
-			
-			const callback = function(){
-				alert("You clicked an object");
+			var callback = function(){
+				//handle functions in here rather then lots of function names
+				//could use redirect from here too rather than the links supplied in the flow chart
+
+				const id = arguments[0];
+				switch (id){
+					case "id1":
+					alert("YOU FOUND TH3E START");
+					break;
+					
+					case "id2":
+					window.location = "https://www.google.com";
+					break;
+					
+					default:
+					alert("You clicked an object: " + id);
+				}				
 			}
 			</script>
 
