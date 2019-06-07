@@ -37,9 +37,9 @@
 		<g model-id="730af296-5fb2-4673-aade-7c5ba8d2dd54" id="j_146" class="joint-cell joint-type-standard joint-type-standard-rectangle joint-element joint-theme-modern" data-type="standard.Rectangle" data-tooltip-position="left" data-tooltip-position-selector=".joint-stencil" transform="translate(10,80)">
 			<rect joint-selector="body" id="v-297" stroke-width="2" stroke="#feb663" fill="transparent" rx="2" ry="2" width="90" height="30" stroke-dasharray="0"/>
 			<text joint-selector="label" id="v-298" font-size="12" xml:space="preserve" text-anchor="middle" fill="#222138" font-family="Roboto Condensed" font-weight="Normal" stroke-width="0" transform="matrix(1,0,0,1,45,15)">
-				<a xlink:href="https://www.google.com" target="__self">
-                <tspan class="v-line" dy="0.3em">Test Hyperlink</tspan>
-                </a>
+				
+                <tspan class="v-line" dy="0.3em"><a xlink:href="https://www.google.com" target="__self">Test Hyperlink</a></tspan>
+                
 			</text>
 		</g>
 		<g model-id="6179c5bc-dd97-4c7f-86ca-b8947f369c46" id="j_148" class="joint-cell joint-type-app joint-type-app-link joint-link joint-theme-modern" data-type="app.Link">
