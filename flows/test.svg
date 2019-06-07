@@ -41,12 +41,14 @@
 			</text>
 		</g>
 		<g model-id="2fe809e6-c0bd-4dfe-a5af-cfbd53342e04" id="j_173" class="joint-cell joint-type-standard joint-type-standard-rectangle joint-element joint-theme-modern" data-type="standard.Rectangle" data-tooltip-position="left" data-tooltip-position-selector=".joint-stencil" transform="translate(460,270)">
-			<a xlink:href="www.google.com" target="__blank">
+			
             <rect joint-selector="body" id="v-297" stroke-width="2" stroke="#fe854f" fill="#feb663" rx="2" ry="2" width="90" height="40" stroke-dasharray="0"/>
 			<text joint-selector="label" id="v-298" font-size="20" xml:space="preserve" text-anchor="middle" fill="#222138" font-family="Roboto Condensed" font-weight="Normal" stroke-width="0" transform="matrix(1,0,0,1,45,20)">
-				<tspan class="v-line" dy="0.3em">Test Link</tspan>
+				<a xlink:href="https://www.google.com" target="__self">
+                <tspan class="v-line" dy="0.3em">Test Link</tspan>
+                </a>
 			</text>
-            </a>
+            
 		</g>
 		<g model-id="9a157265-d9e5-4638-8fe0-34bdd7369a50" id="j_175" class="joint-cell joint-type-app joint-type-app-link joint-link joint-theme-modern" data-type="app.Link">
 			<path fill="none" cursor="pointer" stroke="transparent" joint-selector="wrapper" id="v-300" stroke-width="10" stroke-linejoin="round" d="M 505 201 L 505 259"/>
