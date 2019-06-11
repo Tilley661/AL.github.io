@@ -11,6 +11,7 @@
 				<!-- use below for local tests
 				<base href="file:///C:/Users/145781/Documents/GitHub/Tilley661.github.io/">
 				-->
+				<base href="file:///C:/Users/145781/Documents/GitHub/Tilley661.github.io/">
 				
 
 		<title>Test site</title>
@@ -24,7 +25,6 @@
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 		crossorigin="anonymous"></script>
 
-		<script src="https://unpkg.com/mermaid@8.0.0/dist/mermaid.js"></script>
 
 		<style>
 				.ameyStandard > rect{
@@ -35,6 +35,12 @@
 				.ameyStandard .label{
 					text-align: center
 				}
+
+				svg g:hover + svg g rect{
+					stroke:red;
+				}
+
+
 			</style>
 	</head>
 	<body class="is-preload">
@@ -60,117 +66,17 @@
 
 
 							<!-- Section -->
-								<section>
+								<section id="section-container">
+									<!-- Dynaicallty loaded content: defaults to Error-->
+									
+									
+									
 									<header class="major">
-										<h2><a href=""></a>Example Flow</h2>
+										<h2><a href="">Error</a></h2>
 									</header>
 
-									<!--Cannot use img tags for SVG. Use backend support to read file - for now use inline-->
-									<object type="image/svg+xml" data="flows/flow001.svg" class="">
-									  </object>
-
-									<!--
-<svg
-xmlns="http://www.w3.org/2000/svg"
-xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="v-322" width="246" height="256" viewBox="0 0 246 256">
-<style id="v-323" type="text/css">
-<![CDATA[.scalable * { vector-effect: non-scaling-stroke }]]>
-</style>
-<defs id="v-4">
-<marker id="v-22086724885" orient="auto" overflow="visible" markerUnits="userSpaceOnUse">
-<path id="v-225" stroke="none" fill="#31d0c6" d="M 0 0 0 0"/>
-</marker>
-<marker id="v-2424608477" orient="auto" overflow="visible" markerUnits="userSpaceOnUse">
-<path id="v-227" stroke="none" fill="#31d0c6" transform="rotate(180)" d="M 0 -5 -10 0 0 5 z"/>
-</marker>
-<marker id="v-236166723" orient="auto" overflow="visible" markerUnits="userSpaceOnUse">
-<path id="v-235" stroke="none" fill="#7c68fc" d="M 0 0 0 0"/>
-</marker>
-<marker id="v-2-259470097" orient="auto" overflow="visible" markerUnits="userSpaceOnUse">
-<path id="v-237" stroke="none" fill="#7c68fc" transform="rotate(180)" d="M 0 -5 -10 0 0 5 z"/>
-</marker>
-<marker id="v-22142555970" orient="auto" overflow="visible" markerUnits="userSpaceOnUse">
-<path id="v-249" stroke="none" fill="#8f8f8f" d="M 0 0 0 0"/>
-</marker>
-<marker id="v-2-1245724272" orient="auto" overflow="visible" markerUnits="userSpaceOnUse">
-<path id="v-251" stroke="none" fill="#8f8f8f" transform="rotate(180)" d="M 0 -5 -10 0 0 5 z"/>
-</marker>
-<marker id="v-2-610058086" orient="auto" overflow="visible" markerUnits="userSpaceOnUse">
-<path id="v-265" stroke="none" fill="#7c68fc" transform="rotate(180)" d="M 0 0 0 0"/>
-</marker>
-</defs>
-<g id="v-3" class="joint-viewport">
-<g model-id="09d9e6ae-9a01-47df-be54-0e3abfe67fe9" id="j_138" class="joint-cell joint-type-standard joint-type-standard-rectangle joint-element joint-theme-modern" data-type="standard.Rectangle" data-tooltip-position="left" data-tooltip-position-selector=".joint-stencil" transform="translate(10,10)">
-<rect joint-selector="body" id="v-295" stroke-width="2" stroke="#feb663" fill="transparent" rx="2" ry="2" width="90" height="30" stroke-dasharray="0"/>
-<text joint-selector="label" id="v-296" font-size="12" xml:space="preserve" text-anchor="middle" fill="#222138" font-family="Roboto Condensed" font-weight="Normal" stroke-width="0" transform="matrix(1,0,0,1,45,15)">
-<tspan class="v-line" dy="0.3em">Start</tspan>
-</text>
-</g>
-<g model-id="730af296-5fb2-4673-aade-7c5ba8d2dd54" id="j_146" class="joint-cell joint-type-standard joint-type-standard-rectangle joint-element joint-theme-modern" data-type="standard.Rectangle" data-tooltip-position="left" data-tooltip-position-selector=".joint-stencil" transform="translate(10,80)">
-<rect joint-selector="body" id="v-297" stroke-width="2" stroke="#feb663" fill="transparent" rx="2" ry="2" width="90" height="30" stroke-dasharray="0"/>
-<text joint-selector="label" id="v-298" font-size="12" xml:space="preserve" text-anchor="middle" fill="#222138" font-family="Roboto Condensed" font-weight="Normal" stroke-width="0" transform="matrix(1,0,0,1,45,15)">
-<a xlink:href="https://www.google.com" target="__self">
-<tspan class="v-line" dy="0.3em">Test Hyperlink</tspan>
-</a>
-</text>
-</g>
-<g model-id="6179c5bc-dd97-4c7f-86ca-b8947f369c46" id="j_148" class="joint-cell joint-type-app joint-type-app-link joint-link joint-theme-modern" data-type="app.Link">
-<path fill="none" cursor="pointer" stroke="transparent" joint-selector="wrapper" id="v-300" stroke-width="10" stroke-linejoin="round" d="M 55 41 L 55 69"/>
-<path fill="none" pointer-events="none" joint-selector="line" id="v-299" stroke="#8f8f8f" stroke-dasharray="0" stroke-width="2" stroke-linejoin="round" marker-start="url(#v-22142555970)" marker-end="url(#v-2-1245724272)" d="M 55 41 L 55 69"/>
-</g>
-<g model-id="f483981e-b7fe-4aa7-81d1-7b0ed500daa1" id="j_156" class="joint-cell joint-type-standard joint-type-standard-rectangle joint-element joint-theme-modern" data-type="standard.Rectangle" data-tooltip-position="left" data-tooltip-position-selector=".joint-stencil" transform="translate(10,155)">
-<rect joint-selector="body" id="v-303" stroke-width="2" stroke="#feb663" fill="transparent" rx="2" ry="2" width="90" height="30" stroke-dasharray="0"/>
-<text joint-selector="label" id="v-304" font-size="12" xml:space="preserve" text-anchor="middle" fill="#222138" font-family="Roboto Condensed" font-weight="Normal" stroke-width="0" transform="matrix(1,0,0,1,45,15)">
-<a xlink:href="content/how-to-example.html" target="__self">
-<tspan class="v-line" dy="0.3em">Test How-To</tspan>
-</a>
-</text>
-</g>
-<g model-id="106a19b4-07b7-4c1d-9aaa-822ca843607d" id="j_158" class="joint-cell joint-type-app joint-type-app-link joint-link joint-theme-modern" data-type="app.Link">
-<path fill="none" cursor="pointer" stroke="transparent" joint-selector="wrapper" id="v-306" stroke-width="10" stroke-linejoin="round" d="M 55 111 L 55 144"/>
-<path fill="none" pointer-events="none" joint-selector="line" id="v-305" stroke="#8f8f8f" stroke-dasharray="0" stroke-width="2" stroke-linejoin="round" marker-start="url(#v-22142555970)" marker-end="url(#v-2-1245724272)" d="M 55 111 L 55 144"/>
-</g>
-<g model-id="52d65605-9769-4cd3-9dd4-04f919832384" id="j_162" class="joint-cell joint-type-standard joint-type-standard-rectangle joint-element joint-theme-modern" data-type="standard.Rectangle" data-tooltip-position="left" data-tooltip-position-selector=".joint-stencil" transform="translate(155,155)">
-<rect joint-selector="body" id="v-307" stroke-width="2" stroke="#feb663" fill="transparent" rx="2" ry="2" width="90" height="30" stroke-dasharray="0"/>
-<text joint-selector="label" id="v-308" font-size="12" xml:space="preserve" text-anchor="middle" fill="#222138" font-family="Roboto Condensed" font-weight="Normal" stroke-width="0" transform="matrix(1,0,0,1,45,15)">
-<tspan class="v-line" dy="0.3em">Finish</tspan>
-</text>
-</g>
-<g model-id="f8eed33f-e17e-4743-b4b6-ddf452813c94" id="j_164" class="joint-cell joint-type-app joint-type-app-link joint-link joint-theme-modern" data-type="app.Link" style="pointer-events: visiblepainted;">
-<path fill="none" cursor="pointer" stroke="transparent" joint-selector="wrapper" id="v-310" stroke-width="10" stroke-linejoin="round" d="M 200 214 L 200 196"/>
-<path fill="none" pointer-events="none" joint-selector="line" id="v-309" stroke="#8f8f8f" stroke-dasharray="0" stroke-width="2" stroke-linejoin="round" marker-start="url(#v-22142555970)" marker-end="url(#v-2-1245724272)" d="M 200 214 L 200 196"/>
-</g>
-<g model-id="96e49c10-39df-4c1e-9e8a-8cb4aaedc5b8" id="j_170" class="joint-cell joint-type-standard joint-type-standard-rectangle joint-element joint-theme-modern" data-type="standard.Rectangle" data-tooltip-position="left" data-tooltip-position-selector=".joint-stencil" transform="translate(10,220)">
-<rect joint-selector="body" id="v-311" stroke-width="2" stroke="#feb663" fill="transparent" rx="2" ry="2" width="90" height="30" stroke-dasharray="0"/>
-<text joint-selector="label" id="v-312" font-size="12" xml:space="preserve" text-anchor="middle" fill="#222138" font-family="Roboto Condensed" font-weight="Normal" stroke-width="0" transform="matrix(1,0,0,1,45,15)">
-<a xlink:href="?svgclick=arguments" target="__self">
-<tspan class="v-line" dy="0.3em">Test JS Function</tspan>
-</a>
-</text>
-</g>
-<g model-id="24a5e6ad-bd1b-422c-bcf8-24c2c5a3fb84" id="j_172" class="joint-cell joint-type-app joint-type-app-link joint-link joint-theme-modern" data-type="app.Link">
-<path fill="none" cursor="pointer" stroke="transparent" joint-selector="wrapper" id="v-314" stroke-width="10" stroke-linejoin="round" d="M 55 186 L 55 209"/>
-<path fill="none" pointer-events="none" joint-selector="line" id="v-313" stroke="#8f8f8f" stroke-dasharray="0" stroke-width="2" stroke-linejoin="round" marker-start="url(#v-22142555970)" marker-end="url(#v-2-1245724272)" d="M 55 186 L 55 209"/>
-</g>
-<g model-id="1bd0a7da-1bd8-4bc5-9547-49a38226ebd3" id="j_178" class="joint-cell joint-type-standard joint-type-standard-rectangle joint-element joint-theme-modern" data-type="standard.Rectangle" data-tooltip-position="left" data-tooltip-position-selector=".joint-stencil" transform="translate(155,215)">
-<rect joint-selector="body" id="v-317" stroke-width="2" stroke="#feb663" fill="transparent" rx="2" ry="2" width="90" height="40" stroke-dasharray="0"/>
-<text joint-selector="label" id="v-318" font-size="12" xml:space="preserve" text-anchor="middle" fill="#222138" font-family="Roboto Condensed" font-weight="Normal" stroke-width="0" transform="matrix(1,0,0,1,45,20)">
-<tspan class="v-line" dy="-0.2em">Test JS open </tspan>
-<tspan dy="1em" x="0" class="v-line">another flow</tspan>
-</text>
-</g>
-<g model-id="916058dc-4d16-4b3f-8035-f8e5c40e1a1f" id="j_180" class="joint-cell joint-type-app joint-type-app-link joint-link joint-theme-modern" data-type="app.Link">
-<path fill="none" cursor="pointer" stroke="transparent" joint-selector="wrapper" id="v-320" stroke-width="10" stroke-linejoin="round" d="M 101 235 L 144 235"/>
-<path fill="none" pointer-events="none" joint-selector="line" id="v-319" stroke="#8f8f8f" stroke-dasharray="0" stroke-width="2" stroke-linejoin="round" marker-start="url(#v-22142555970)" marker-end="url(#v-2-1245724272)" d="M 101 235 L 144 235"/>
-</g>
-</g>
-<g id="v-5" class="joint-tools-container" transform="matrix(2,0,0,2,0,0)"/>
-</svg>
-
-
--->
-
-							
+									
+										
 								</section>
 
 						</div>
@@ -270,6 +176,8 @@ xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="v-322" width="246" 
 
 			</div>
 
+
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
@@ -279,37 +187,87 @@ xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="v-322" width="246" 
 			<!-- flows-->
 
 			<script>
-			
-			mermaid.initialize({startOnLoad:true});
+			$(document).ready(function() {
 
-			$(document).load(function() {
-				mermaid.initialize();
+				var currentURL = window.location.href;
+				console.log("Current URL",currentURL);
 			});
+				
 			</script>
 
 			<script>
-			var callback = function(){
-				//handle functions in here rather then lots of function names
-				//could use redirect from here too rather than the links supplied in the flow chart
+			//open another flow -do i use another web page??
+			//do i open the flow in the current view port???
 
-				const id = arguments[0];
-				switch (id){
-					case "id1":
-					alert("YOU FOUND TH3E START");
-					break;
-					
-					case "id2":
-					window.location = "https://www.google.com";
-					break;
+			//use hyperlink for another webpage
 
-					case "id5":
-					window.location = "content/how-to-example.html"
-					
-					default:
-					alert("You clicked an object: " + id);
-				}				
+			//testing the below function for importing new flow here - use jquery and change DOM
+
+			const changeFlow = function(newFlowId){
+				//<object id="flow-container" type="image/svg+xml" data="flows/flow001.svg" class=""></object>
+				$('#flow-container').attr('data',`flows/${newFlowid}.svg`);
 			}
+			//thinking about the above:
+				//becomes too complex for somthing which should just link. 
+				//thinking it would be better to create a bank of HTML files to be dynamically loaded in rather than changing the objects
+				//This would alow the use of titles etc and not just changing the flow
+				//use the blow for this
+			
+
+		$(document).ready(function() {
+			//includeHTML();
+			changeSection("flow001");
+		});
+
+		function changeSection(flowId) {
+			//$('#section-container').html(`<object type="text/html" data="flowshtml/${flowId}.html"></object>`);
+			//change DOM
+			$('#section-container').html(`<div w3-include-html="flowshtml/${flowId}.html"></div>`);
+			//update HTML
+			includeHTML();
+	
+		}
+
 			</script>
+
+		<script>
+			//need below for including html using W3
+				function includeHTML() {
+				var z, i, elmnt, file, xhttp;
+				/* Loop through a collection of all HTML elements: */
+				z = document.getElementsByTagName("*");
+				for (i = 0; i < z.length; i++) {
+					elmnt = z[i];
+					/*search for elements with a certain atrribute:*/
+					file = elmnt.getAttribute("w3-include-html");
+					if (file) {
+					/* Make an HTTP request using the attribute value as the file name: */
+					xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function() {
+						if (this.readyState == 4) {
+						if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+						if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+						/* Remove the attribute, and call this function once more: */
+						elmnt.removeAttribute("w3-include-html");
+						includeHTML();
+						}
+					}
+					xhttp.open("GET", file, true);
+					xhttp.send();
+					/* Exit the function: */
+					return;
+					}
+				}
+				}
+			</script> 
+
+			<script>
+				function test(){
+					alert("hello");
+				}
+			</script>
+	
+
 
 	</body>
 </html>
