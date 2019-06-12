@@ -48,6 +48,7 @@
 								<!--flow title-->
 								<header class="major">
 										<h2><a href=""></a>Flow #001</h2>
+										<div data-dthyperfilla="test">click test</div>
 								</header>
 								
 								<!--Cannot use img tags for SVG. Use backend support to read file - for now use inline-->
@@ -71,10 +72,11 @@
 
 			</div>
 			
+
+
+			<!--DO NOT DELETE BELOW FUNCTIONS OR TRY TO RESOURCE THEM-->
 			<script src="../assets/js/jquery.min.js"></script>
-
 			<script>
-
 					//load content fist using Jquery
 					$(function(){
 					  var includes = $('[data-include]');
@@ -85,27 +87,36 @@
 					});
 
 					//load scripts after this
+
 					$(function(){
-						var scripts=[
-						'../assets/js/browser.min.js',
-						'../assets/js/breakpoints.min.js',
-						'../assets/js/util.js',
-						'../assets/js/main.js'
-					];
+						//can add scripts and loactions to this which will be itterated on each flow template
+						var jsobject = jQuery.getJSON('../assets/js/alljsfortemplates.json')
+						.done(function(data){
+							$.each(data,function(i,item){
+								console.log(data[i]);
+								loadScript(data[i]);
 
-						jQuery.each(scripts, function(key, value){
-							console.log(value);
-							jQuery.getScript(value)
-							.done(function(){
-								console.log(`got script: ${value}`);
-							})
-							.fail(function(){
-								console.log(`failed to load script: ${value}`);
 							});
-						})
-					})
-					
-			</script>
+						});
+					});
+					function loadScript(location){
 
+						jQuery.getScript(location)
+						.done(function(){
+							console.log(`got script: ${location}`);
+						})
+						.fail(function(){
+							console.log(`failed to load script: ${location}`);
+						});
+					}
+
+
+					$(function(){
+						$("svg").css("display","none");
+						$("svg").fadeIn("slow");
+					});
+
+
+			</script>
 	</body>
 </html>
