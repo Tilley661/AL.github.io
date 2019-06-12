@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+
+
+				<!-- use below for local tests
+				<base href="file:///C:/Users/145781/Documents/GitHub/Tilley661.github.io/">
+				-->
+				
+				
+
+		<title>Test site</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+
+		
+		<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous">
+		</script>
+
+		<!-- STYLE SHEETS-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+
+		<style>
+				.ameyStandard > rect{
+					fill:#ebb700 !important;
+					stroke:black !important;
+					stroke-width:1px !important;
+				}
+				.ameyStandard .label{
+					text-align: center
+				}
+
+				svg g:hover + svg g rect{
+					stroke:red;
+				}
+
+
+			</style>
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<!-- Header would make this as a resource-->
+							<div w3-include-html="../resource/header.html"></div>
+							<!-- Section -->
+								<section id="section-container">
+									
+									
+									
+								<header class="major">
+										<h2><a href=""></a>Flow #001</h2>
+								</header>
+								
+								<!--Cannot use img tags for SVG. Use backend support to read file - for now use inline-->
+								
+								<!--
+								
+									dont use object, CSS has issues in object form
+									<object id="flow-container" type="image/svg+xml" data="flows/flow001.svg" class=""></object>
+								-->
+								
+								<div w3-include-html="../flows/flow001.svg"></div>
+
+
+									
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div w3-include-html="../resource/sidebar.html"></div>
+
+			</div>
+
+
+
+		<!-- Scripts -->
+
+			<!--<script src="././assets/js/jquery.min.js"></script>-->
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="../assets/js/includeHTM.js"></script>
+
+			<script>
+			includeHTML();
+			</script>
+			
+			
+			<!-- flows-->
+
+	</body>
+</html>
