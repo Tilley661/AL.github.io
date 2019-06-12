@@ -11,9 +11,7 @@
 				<!-- use below for local tests
 				<base href="file:///C:/Users/145781/Documents/GitHub/Tilley661.github.io/">
 				-->
-				
-				
-
+			
 		<title>Test site</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -26,25 +24,12 @@
 		crossorigin="anonymous">
 		</script>
 
+
 		<!-- STYLE SHEETS-->
 		<link rel="stylesheet" href="../assets/css/main.css" />
-
-		<style>
-				.ameyStandard > rect{
-					fill:#ebb700 !important;
-					stroke:black !important;
-					stroke-width:1px !important;
-				}
-				.ameyStandard .label{
-					text-align: center
-				}
-
-				svg g:hover + svg g rect{
-					stroke:red;
-				}
+		<link rel="stylesheet" href="../assets/css/flows.css" />
 
 
-			</style>
 	</head>
 
 	<body class="is-preload">
@@ -83,26 +68,40 @@
 					</div>
 
 				<!-- Sidebar -->
-				<div w3-include-html="../resource/sidebar.html"></div>
+				<!--<div w3-include-html="../resource/sidebar.html"></div>-->
+				<div data-include="../resource/sidebar.html"></div>
 
 			</div>
 
 
 
-		<!-- Scripts -->
-
-			<!--<script src="././assets/js/jquery.min.js"></script>-->
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
 			<script src="../assets/js/includeHTM.js"></script>
 
 			<script>
 			includeHTML();
 			</script>
+
+
+
+		<!-- Scripts -->
+
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
 			
-			
+			<script>
+				//another method to include files
+				$(function(){
+				  var includes = $('[data-include]');
+				  jQuery.each(includes, function(){
+					var file = $(this).data('include');
+					$(this).load(file);
+				  });
+				});
+			  </script>
 			<!-- flows-->
 
 	</body>

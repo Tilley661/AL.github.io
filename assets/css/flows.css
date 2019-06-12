@@ -1,0 +1,15 @@
+
+.ameyStandard > rect{
+    fill:#ebb700 !important;
+    stroke:black !important;
+    stroke-width:1px !important;
+}
+.ameyStandard .label{
+    text-align: center
+}
+
+svg g:hover + svg g rect{
+    stroke:red;
+}
+
+
