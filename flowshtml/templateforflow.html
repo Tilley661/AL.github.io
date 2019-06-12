@@ -18,12 +18,13 @@
 
 
 		
+		<!--
 		<script
 		src="https://code.jquery.com/jquery-3.4.1.min.js"
 		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 		crossorigin="anonymous">
 		</script>
-
+	-->
 
 		<!-- STYLE SHEETS-->
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -40,12 +41,11 @@
 					<div id="main">
 						<div class="inner">
 							<!-- Header would make this as a resource-->
-							<div w3-include-html="../resource/header.html"></div>
+							<div data-include="../resource/header.html"></div>
 							<!-- Section -->
 								<section id="section-container">
 									
-									
-									
+								<!--flow title-->
 								<header class="major">
 										<h2><a href=""></a>Flow #001</h2>
 								</header>
@@ -57,52 +57,55 @@
 									dont use object, CSS has issues in object form
 									<object id="flow-container" type="image/svg+xml" data="flows/flow001.svg" class=""></object>
 								-->
-								
-								<div w3-include-html="../flows/flow001.svg"></div>
+								<!-- include flow image-->
+								<div data-include="../flows/flow001.svg"></div>
 
-
-									
 								</section>
 
 						</div>
 					</div>
 
 				<!-- Sidebar -->
-				<!--<div w3-include-html="../resource/sidebar.html"></div>-->
 				<div data-include="../resource/sidebar.html"></div>
+			
 
 			</div>
-
-
-
-			<script src="../assets/js/includeHTM.js"></script>
-
-			<script>
-			includeHTML();
-			</script>
-
-
-
-		<!-- Scripts -->
-
-			<script src="../assets/js/jquery.min.js"></script>
-			<script src="../assets/js/browser.min.js"></script>
-			<script src="../assets/js/breakpoints.min.js"></script>
-			<script src="../assets/js/util.js"></script>
-			<script src="../assets/js/main.js"></script>
-
 			
+			<script src="../assets/js/jquery.min.js"></script>
+
 			<script>
-				//another method to include files
-				$(function(){
-				  var includes = $('[data-include]');
-				  jQuery.each(includes, function(){
-					var file = $(this).data('include');
-					$(this).load(file);
-				  });
-				});
-			  </script>
-			<!-- flows-->
+
+					//load content fist using Jquery
+					$(function(){
+					  var includes = $('[data-include]');
+					  jQuery.each(includes, function(){
+						var file = $(this).data('include');
+						$(this).load(file);
+					  });
+					});
+
+					//load scripts after this
+					$(function(){
+						var scripts=[
+						'../assets/js/browser.min.js',
+						'../assets/js/breakpoints.min.js',
+						'../assets/js/util.js',
+						'../assets/js/main.js'
+					];
+
+						jQuery.each(scripts, function(key, value){
+							console.log(value);
+							jQuery.getScript(value)
+							.done(function(){
+								console.log(`got script: ${value}`);
+							})
+							.fail(function(){
+								console.log(`failed to load script: ${value}`);
+							});
+						})
+					})
+					
+			</script>
 
 	</body>
 </html>
