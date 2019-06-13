@@ -8,13 +8,25 @@
     text-align: center
 }
 
-svg g:hover > text{
+
+
+.dt-flow{
+    text-align: center;
+}
+
+.dt-flow-link:hover > text{
     fill:#977500;
+    cursor: pointer !important;
  }
- svg g:hover > rect{
+ .dt-flow-link:hover > rect{
      fill:#d4d4d4;
      stroke: #977500;
      stroke-width: 1.5px;
      opacity: 1;
+     cursor: pointer !important;
  }
  
+  
+svg{
+    cursor: default !important;
+}
