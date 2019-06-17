@@ -75,7 +75,7 @@
 			<path fill="none" cursor="cursor" stroke="transparent" joint-selector="wrapper" id="v-314" stroke-width="10" stroke-linejoin="round" d="M 55 186 L 55 209"/>
 			<path fill="none" pointer-events="none" joint-selector="line" id="v-313" stroke="#8f8f8f" stroke-dasharray="0" stroke-width="2" stroke-linejoin="round" marker-start="url(#v-22142555970)" marker-end="url(#v-2-1245724272)" d="M 55 186 L 55 209"/>
 		</g>
-		<g onClick="flowHandler('hyperlink','flow002.html')" model-id="1bd0a7da-1bd8-4bc5-9547-49a38226ebd3" id="j_178" class="dt-flow-link joint-cell joint-type-standard joint-type-standard-rectangle joint-element joint-theme-modern" data-type="standard.Rectangle" data-tooltip-position="left" data-tooltip-position-selector=".joint-stencil" transform="translate(155,215)">
+		<g onClick="flowHandler('hyperlink','flow002.html')" model-id="1bd0a7da-1bd8-4bc5-9547-49a38226ebd3" id="j_178" class="dt-flow-link dt-flow-redbg joint-cell joint-type-standard joint-type-standard-rectangle joint-element joint-theme-modern" data-type="standard.Rectangle" data-tooltip-position="left" data-tooltip-position-selector=".joint-stencil" transform="translate(155,215)">
 			<rect joint-selector="body" id="v-317" stroke-width="2" stroke="#feb663" fill="transparent" rx="2" ry="2" width="90" height="40" stroke-dasharray="0"/>
 			<text joint-selector="label" id="v-318" font-size="12" text-anchor="middle" fill="#222138" font-family="Roboto Condensed" font-weight="Normal" stroke-width="0" transform="matrix(1,0,0,1,45,20)">
 				<tspan class="v-line" dy="-0.2em">Open flow #002</tspan>
