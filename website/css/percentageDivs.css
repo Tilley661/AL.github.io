@@ -7,12 +7,11 @@
   }
   
   .falling-div{
-    background-color: yellow;
+    background-color: #0084ff;
     width: 100vw;
     height: 100vh;
-    position: absolute;
-    /* initial position */
-    top: 0vh;
+    position: relative;
+    bottom:0px;
   }
   
 
