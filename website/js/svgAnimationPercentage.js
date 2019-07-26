@@ -11,8 +11,10 @@ $(document).ready(function(){
 })
 
 $('#container').bind('mousewheel DOMMouseScroll', function(event) {
-	console.log(JSON.stringify(globals))
-	if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+    
+    console.log(JSON.stringify(globals))
+    
+    if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
 
         globals.percentage -= 10;
         if (globals.percentage < 0){
@@ -57,26 +59,33 @@ function animate(svg){
 
     var el = $(`#${svg} g, rect, path`);
     var time = 200;
-    var max = 1000;
-    var min = 200;
+    var max = 100;
+    var min = 20;
     var percentageMod = (globals.percentage/100);
     
     el.each(function(index){
 
         time  = Math.random() * (max - min) + min;
         
-        
+        console.log("animating element");
+
         $( this ).animate(
             {"opacity":(end.opacity - start.opacity) * percentageMod},
             {duration:time,
             complete:function(){
-                //do somthing on completed
-                globals.animating = false;
+                //do somthing on complete
             }
         });
     
 
     });
+
+    //wait max amouunt of time then set animating to false
+    console.log("setting time out for " + max + "millisecsongs")
+    setTimeout(function(){
+        globals.animating = false;
+        console.log("changed animation value to " + globals.animating);
+    },max);
 
 
 }
