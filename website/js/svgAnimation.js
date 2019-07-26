@@ -4,8 +4,11 @@ function animateSVG(svg){
 
 
     var el = $(`#${svg} g`);
+    console.log(el);
+
     el.css({"opacity":"1"})
     el.each(function(graphic){
+        console.log(graphic)
         
         graphic.animate(
             {"opactity":"0"},
@@ -14,7 +17,7 @@ function animateSVG(svg){
                 //do somthing on completed
             }
         });
-        
+
     });
 
 
