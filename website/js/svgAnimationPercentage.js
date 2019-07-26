@@ -27,6 +27,7 @@ $('#container').bind('mousewheel DOMMouseScroll', function(event) {
 
 	}
 
+    console.log(JSON.stringify(globals))
 	animate(globals.svgToAnimate);
 
 });
