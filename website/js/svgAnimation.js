@@ -4,15 +4,17 @@ function animateSVG(svg){
 
 
     var el = $(`#${svg} g`);
-    console.log("full element = " + el);
+    var time = 200;
+    var max = 1000;
 
     el.css({"opacity":"1"})
     el.each(function(index){
 
-
+        time  = Math.random() * (max - min) + min;
+        console.log($(this));
         $( this ).animate(
             {"opactity":"0"},
-            {duration:200,
+            {duration:time,
             complete:function(){
                 //do somthing on completed
             }
