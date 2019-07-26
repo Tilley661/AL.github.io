@@ -25,7 +25,7 @@ $('#container').bind('mousewheel DOMMouseScroll', function(event) {
 
 	} else {
         globals.scrollingDirection = "down";
-		globals.percentage += 20;
+		globals.percentage += 10;
 
 	}
 
@@ -59,8 +59,8 @@ function animate(svg){
 
     var el = $(`#${svg} g, rect, path`);
     var time = 200;
-    var max = 150;
-    var min = 50;
+    var max = 200;
+    var min = 100;
     var percentageMod = (globals.percentage/100);
     var endOpacity;
 
