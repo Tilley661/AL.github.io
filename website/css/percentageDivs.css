@@ -1,0 +1,25 @@
+#container{
+    position: fixed;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px 0px 0px 0px;
+  }
+  
+  .falling-div{
+    background-color: yellow;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    /* initial position */
+    top: 0vh;
+  }
+  
+
+  /*
+  #falling-div-1{
+  
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(60, 60, 60, 1));
+    
+  }
+  */
