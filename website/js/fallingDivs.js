@@ -2,20 +2,12 @@
 var globals = {
 	scrolling: false,
 	nextDiv: false,
-	divToMove: 1
+	divToMove: 1,
+	divOnScreen: 0.5
 }
 
 
 
-/*
-$(document).ready(function(){
-	var el = $('.falling-div');
-	var iniitPositionForFallingDivs = 0 - $(window).height() - el.height();
-	el.each(function(){
-		$(this).css({"top":iniitPositionForFallingDivs});
-	})
-})
-*/
 
 $('#container').bind('mousewheel DOMMouseScroll', function(event) {
 	console.log(JSON.stringify(globals))
@@ -23,9 +15,15 @@ $('#container').bind('mousewheel DOMMouseScroll', function(event) {
 		moveFallingDiv("up");
 	} else {
 		moveFallingDiv("down");
-		animateSVG('cityScape')
 	}
+
+
 });
+
+
+
+
+
 
 function moveFallingDiv(direction) {
 	//check div elements exist if not rest to 1
