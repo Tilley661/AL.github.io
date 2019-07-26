@@ -30,6 +30,8 @@ $('#container').bind('mousewheel DOMMouseScroll', function(event) {
 
 function animate(svg){
 
+    if (globals.animating){return}
+    globals.animating = true;
     if (svg === 0 || svg === undefined){return;}
 
 	var start =
@@ -60,6 +62,7 @@ function animate(svg){
             {duration:time,
             complete:function(){
                 //do somthing on completed
+                globals.animating = false;
             }
         });
     
