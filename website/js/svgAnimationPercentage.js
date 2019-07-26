@@ -62,15 +62,21 @@ function animate(svg){
     var max = 1000;
     var min = 200;
     var percentageMod = (globals.percentage/100);
-    
+    var endOpacity;
+
     el.each(function(index){
 
+        //take a random number between 0 - 1
+        // then as percentage increases to 1 tend to end opacity
+        endOpacity = percentageMod + (Math.random() * (end.opacity - start.opacity)); // randomizes the opacity but will eventually be 1
+        if (endOpacity > 1){endOpacity = 1};
+        
         time  = Math.random() * (max - min) + min;
         
         console.log("animating element");
 
         $( this ).animate(
-            {"opacity":(end.opacity - start.opacity) * percentageMod},
+            {"opacity":endOpacity},
             {duration:time,
             complete:function(){
                 //do somthing on complete
