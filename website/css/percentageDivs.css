@@ -1,13 +1,17 @@
 #container{
     position: fixed;
-    background-color: black;
     width: 100vw;
     height: 100vh;
     margin: 0px 0px 0px 0px;
   }
   
-  .falling-div{
+
+  .bg{
     background-color: #a5e9f5;
+  }
+
+  .fading-div{
+    background-color: rgba(1, 1, 1, 0);
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -15,10 +19,37 @@
   }
 
   .svg-holder{
-    position: relative;
+    position: fixed;
     bottom:0px;
   }
+
+  .svg-holder g, rect, path{
+    opacity: 0;
+
+  }
+
+
+  .nav-top ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-top li {
+    float: left;
+    
+  }
+  .nav-top li a{
+    background-color: hsl(189, 96%, 68%);
+  }
+
+  .nav-top li a:hover{
+    background-color: hsl(189, 91%, 55%);
+  }
+
   
+
+
+
 
   /*
   #falling-div-1{

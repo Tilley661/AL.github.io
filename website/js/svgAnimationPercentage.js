@@ -20,12 +20,6 @@ var svgs ={
 
 
 
-
-$(document).ready(function(){
-    console.log("setting initial values");
-    $(`#${globals.svgToAnimate} g, rect, path`).css({"opacity":"0"})
-})
-
 $('#container').bind('mousewheel DOMMouseScroll', function(event) {
     
 
@@ -38,7 +32,7 @@ $('#container').bind('mousewheel DOMMouseScroll', function(event) {
 
 	} else {
         globals.scrollingDirection = "down";
-		globals.percentage += 10;
+		globals.percentage += 15;
 
 	}
 
@@ -59,12 +53,12 @@ function animate(svg){
 
 	var start =
 	{
-		opacity:"0"
+		opacity:0,
 	}
 
 	var end = 
 	{
-		opacity:"1"
+		opacity:1,
 	}
 
 
@@ -72,10 +66,11 @@ function animate(svg){
 
     var el = $(`#${svg} g, rect, path`);
     var time = 200;
-    var max = 200;
-    var min = 100;
+    var max = 75;
+    var min = 10;
     var percentageMod = (globals.percentage/100);
-    var endOpacity;
+    var endOpacity = 0;
+    var i=true;
 
     el.each(function(){
 
@@ -85,6 +80,11 @@ function animate(svg){
             endOpacity = (percentageMod * (end.opacity - start.opacity)) + start.opacity + (Math.random() * 0.25); // randomizes the opacity but will eventually be 1
         }else{
             endOpacity =  (percentageMod) * (Math.random() + 0.25) ; // randomizes the opacity but will eventually be 0
+        }
+
+        if (i){
+            console.log(`endOpactiy = ${endOpacity}`);
+            i = false;
         }
 
         if(globals.percentage < 0){
