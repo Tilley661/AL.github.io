@@ -9,9 +9,16 @@ function animateSVG(svg){
     var min = 3000;
 
     el.css({"opacity":"1"})
+    
     el.each(function(index){
 
         time  = Math.random() * (max - min) + min;
+        
+        $( this ).css({
+            "opacity":"0.5"
+        });
+
+        /*        
         $( this ).animate(
             {"opactity":"0"},
             {duration:time,
@@ -20,6 +27,7 @@ function animateSVG(svg){
                 console.log(`after ${time/1000} seconds: completed animateion of: ${$(this)}`)
             }
         });
+        */
 
     });
 }
