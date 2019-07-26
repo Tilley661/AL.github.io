@@ -4,12 +4,12 @@ function animateSVG(svg){
 
 
     var el = $(`#${svg} g`);
-    console.log(el);
+    console.log("full element = " + el);
 
     el.css({"opacity":"1"})
     el.each(function(graphic){
         console.log(graphic)
-        
+
         graphic.animate(
             {"opactity":"0"},
             {duration:200,
