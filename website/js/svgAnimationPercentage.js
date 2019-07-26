@@ -1,7 +1,7 @@
 
 var globals ={
     animating:false,
-    percentage:-1,
+    percentage:0,
     svgToAnimate:"city-scape",
 }
 
