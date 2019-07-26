@@ -59,8 +59,8 @@ function animate(svg){
 
     var el = $(`#${svg} g, rect, path`);
     var time = 200;
-    var max = 100;
-    var min = 20;
+    var max = 1000;
+    var min = 200;
     var percentageMod = (globals.percentage/100);
     
     el.each(function(index){
