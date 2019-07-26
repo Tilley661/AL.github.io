@@ -6,6 +6,7 @@ function animateSVG(svg){
     var el = $(`#${svg} g`);
     var time = 200;
     var max = 1000;
+    var min = 3000;
 
     el.css({"opacity":"1"})
     el.each(function(index){
