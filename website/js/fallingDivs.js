@@ -56,7 +56,7 @@ function moveFallingDiv(direction) {
 			complete: function() {
 				//reset element off page
 				el.css({
-					"top": "-1000px",
+					"top": "-110vh",
 					"opacity": "1"
 				})
 				if (direction === "up") {
