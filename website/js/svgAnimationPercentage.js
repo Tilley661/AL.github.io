@@ -1,7 +1,7 @@
 
 var globals ={
     animating:false,
-    percentage:0,
+    percentage:1,
     svgToAnimate:"city-scape",
     scrollingDirection:"down",
 }
@@ -67,7 +67,7 @@ function animate(svg){
     var percentageMod = (globals.percentage/100);
     var endOpacity;
 
-    el.each(function(index){
+    el.each(function(){
 
         //take a random number between 0 - 1
         // then as percentage increases to 1 tend to end opacity
@@ -76,7 +76,7 @@ function animate(svg){
         }else{
             endOpacity =  (Math.random() * (end.opacity - start.opacity)) - percentageMod; // randomizes the opacity but will eventually be 0
         }
-        
+
         if(globals.percentage === 0 || globals.percentage < 0){endOpacity = 1;}
         if(globals.percentage === 100 || globals.percentage > 0){endOpacity = 0;}
 
