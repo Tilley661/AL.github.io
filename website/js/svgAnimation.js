@@ -7,10 +7,10 @@ function animateSVG(svg){
     console.log("full element = " + el);
 
     el.css({"opacity":"1"})
-    el.each(function(graphic){
-        console.log(graphic)
+    el.each(function(index){
 
-        graphic.animate(
+
+        $( this ).animate(
             {"opactity":"0"},
             {duration:200,
             complete:function(){
