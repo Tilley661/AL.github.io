@@ -13,7 +13,7 @@ function animateSVG(svg){
 
         time  = Math.random() * (max - min) + min;
         console.log($(this));
-        $( this ).animate(
+        $( `#${svg} g:nth-child(${index})` ).animate(
             {"opactity":"0"},
             {duration:time,
             complete:function(){
@@ -22,7 +22,4 @@ function animateSVG(svg){
         });
 
     });
-
-
-
 }
