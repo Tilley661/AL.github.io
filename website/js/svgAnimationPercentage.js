@@ -1,9 +1,10 @@
 
 var globals ={
     animating:false,
-    percentage:1,
+    percentage:0,
     svgToAnimate:"city-scape",
     scrollingDirection:"down",
+    firstRoll:true,
 }
 
 
@@ -19,17 +20,11 @@ $('#container').bind('mousewheel DOMMouseScroll', function(event) {
 
         globals.scrollingDirection = "up";
         globals.percentage -= 10;
-        if (globals.percentage < 0){
-            globals.percentage = 0;
-            return
-        };
+
 	} else {
         globals.scrollingDirection = "down";
 		globals.percentage += 10;
-		if (globals.percentage > 100){
-            globals.percentage = 100;
-            return
-        };
+
 	}
 
 	animate(globals.svgToAnimate);
@@ -77,8 +72,14 @@ function animate(svg){
             endOpacity =  (Math.random() * (end.opacity - start.opacity)) - percentageMod; // randomizes the opacity but will eventually be 0
         }
 
-        if(globals.percentage === 0 || globals.percentage < 0){endOpacity = 1;}
-        if(globals.percentage === 100 || globals.percentage > 0){endOpacity = 0;}
+        if(globals.percentage < 0){
+            globals.percentage = 0;
+            endOpacity = 1;
+        }
+        if(globals.percentage > 100){
+            globals.percentage = 100;
+            endOpacity = 0;
+        }
 
 
 
