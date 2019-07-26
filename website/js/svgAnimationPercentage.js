@@ -9,7 +9,7 @@ var globals ={
 
 
 $(document).ready(function(){
-    $(`#${globals.svgToAnimate} g, rect, path`).css({"opacity":"1"})
+    $(`#${globals.svgToAnimate} g, rect, path`).css({"opacity":"0"})
 })
 
 $('#container').bind('mousewheel DOMMouseScroll', function(event) {
