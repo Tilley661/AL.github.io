@@ -32,6 +32,8 @@ function animate(svg){
 
     if (globals.animating){return}
     globals.animating = true;
+
+
     if (svg === 0 || svg === undefined){return;}
 
 	var start =
@@ -58,7 +60,7 @@ function animate(svg){
         
     
         $( this ).animate(
-            {"opacity":end.opacity * globals.percentage},
+            {"opacity":(end.opacity - start.opacity) * globals.percentage},
             {duration:time,
             complete:function(){
                 //do somthing on completed
