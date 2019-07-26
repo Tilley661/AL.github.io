@@ -21,11 +21,11 @@ $('#container').bind('mousewheel DOMMouseScroll', function(event) {
     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
 
         globals.scrollingDirection = "up";
-        globals.percentage -= 10;
+        globals.percentage -= 20;
 
 	} else {
         globals.scrollingDirection = "down";
-		globals.percentage += 10;
+		globals.percentage += 20;
 
 	}
 
