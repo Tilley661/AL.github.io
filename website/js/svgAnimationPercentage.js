@@ -71,7 +71,7 @@ function animate(svg){
         if(globals.scrollingDirection === "down"){
             endOpacity = percentageMod + (Math.random() * (end.opacity - start.opacity)); // randomizes the opacity but will eventually be 1
         }else{
-            endOpacity =  (1 - percentageMod) * (Math.random() + 0.25) ; // randomizes the opacity but will eventually be 0
+            endOpacity =  (percentageMod) * (Math.random() + 0.25) ; // randomizes the opacity but will eventually be 0
         }
 
         if(globals.percentage < 0){
