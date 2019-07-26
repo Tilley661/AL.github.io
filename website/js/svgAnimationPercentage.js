@@ -14,7 +14,8 @@ $(document).ready(function(){
 
 $('#container').bind('mousewheel DOMMouseScroll', function(event) {
     
-    console.log(JSON.stringify(globals))
+
+    if(globals.animating === true){return};
     
     if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
 
@@ -37,7 +38,6 @@ $('#container').bind('mousewheel DOMMouseScroll', function(event) {
 
 function animate(svg){
 
-    if (globals.animating){return}
     globals.animating = true;
 
 
