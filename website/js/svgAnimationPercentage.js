@@ -7,6 +7,19 @@ var globals ={
     firstRoll:true,
 }
 
+var svgs ={
+    1:{
+        name:"city-scape",
+        visible:true, //initially first visible
+    },
+    2:{
+        name:"bridge",
+        visible:false,
+    }
+}
+
+
+
 
 $(document).ready(function(){
     console.log("setting initial values");
