@@ -59,8 +59,8 @@ function animate(svg){
 
     var el = $(`#${svg} g, rect, path`);
     var time = 200;
-    var max = 300;
-    var min = 100;
+    var max = 150;
+    var min = 50;
     var percentageMod = (globals.percentage/100);
     var endOpacity;
 
