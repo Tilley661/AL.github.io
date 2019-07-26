@@ -11,6 +11,7 @@ $('#container').bind('mousewheel DOMMouseScroll', function(event) {
 		moveFallingDiv("up");
 	} else {
 		moveFallingDiv("down");
+		animateSVG('cityScape')
 	}
 });
 
