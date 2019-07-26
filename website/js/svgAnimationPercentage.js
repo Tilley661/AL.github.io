@@ -9,6 +9,7 @@ var globals ={
 
 
 $(document).ready(function(){
+    console.log("setting initial values");
     $(`#${globals.svgToAnimate} g, rect, path`).css({"opacity":"0"})
 })
 
@@ -58,8 +59,8 @@ function animate(svg){
 
     var el = $(`#${svg} g, rect, path`);
     var time = 200;
-    var max = 1000;
-    var min = 200;
+    var max = 300;
+    var min = 100;
     var percentageMod = (globals.percentage/100);
     var endOpacity;
 
@@ -84,7 +85,7 @@ function animate(svg){
             //endOpacity = 0;
         }
 
-
+        console.log("endo opacity ="  + endOpacity)
 
 
         time  = Math.random() * (max - min) + min;
