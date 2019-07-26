@@ -21,7 +21,7 @@ $('#container').bind('mousewheel DOMMouseScroll', function(event) {
 		if (globals.percentage > 100){return};
 	}
 
-	animate(svgToAnimate);
+	animate(globals.svgToAnimate);
 
 });
 
