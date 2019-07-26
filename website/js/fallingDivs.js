@@ -5,6 +5,18 @@ var globals = {
 	divToMove: 1
 }
 
+
+
+
+$(documet).ready(function(){
+	var el = $('.falling-div');
+	var iniitPositionForFallingDivs = 0 - $(window).height() - el.height();
+	el.each(function(){
+		$(this).css({"top":iniitPositionForFallingDivs});
+	})
+})
+
+
 $('#container').bind('mousewheel DOMMouseScroll', function(event) {
 	console.log(JSON.stringify(globals))
 	if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
@@ -24,6 +36,7 @@ function moveFallingDiv(direction) {
 	}
 	var id = globals.divToMove;
 	var el = $(`#falling-div-${id}`);
+
 	console.log("element length" + el.length)
 	if (el.length === 0) {
 		//1 = from start
