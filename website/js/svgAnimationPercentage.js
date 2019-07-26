@@ -15,10 +15,16 @@ $('#container').bind('mousewheel DOMMouseScroll', function(event) {
 	if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
 
         globals.percentage -= 10;
-        if (globals.percentage < 0){return};
+        if (globals.percentage < 0){
+            globals.percentage = 0;
+            return
+        };
 	} else {
 		globals.percentage += 10;
-		if (globals.percentage > 100){return};
+		if (globals.percentage > 100){
+            globals.percentage = 100;
+            return
+        };
 	}
 
 	animate(globals.svgToAnimate);
@@ -53,14 +59,15 @@ function animate(svg){
     var time = 200;
     var max = 1000;
     var min = 200;
+    var percentageMod = (globals.percentage/100);
     
     el.each(function(index){
 
         time  = Math.random() * (max - min) + min;
         
-    
+        
         $( this ).animate(
-            {"opacity":(end.opacity - start.opacity) * globals.percentage},
+            {"opacity":(end.opacity - start.opacity) * percentageMod},
             {duration:time,
             complete:function(){
                 //do somthing on completed
