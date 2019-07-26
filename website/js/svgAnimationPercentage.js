@@ -76,7 +76,12 @@ function animate(svg){
         }else{
             endOpacity =  (Math.random() * (end.opacity - start.opacity)) - percentageMod; // randomizes the opacity but will eventually be 0
         }
-        if (endOpacity > 1){endOpacity = 1};
+        
+        if(globals.percentage === 0 || globals.percentage < 0){endOpacity = 1;}
+        if(globals.percentage === 100 || globals.percentage > 0){endOpacity = 0;}
+
+
+
 
         time  = Math.random() * (max - min) + min;
         
