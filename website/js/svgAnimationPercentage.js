@@ -75,11 +75,13 @@ function animate(svg){
 
         if(globals.percentage < 0){
             globals.percentage = 0;
-            endOpacity = 1;
+            return;
+            //endOpacity = 1;
         }
         if(globals.percentage > 100){
             globals.percentage = 100;
-            endOpacity = 0;
+            return;
+            //endOpacity = 0;
         }
 
 
