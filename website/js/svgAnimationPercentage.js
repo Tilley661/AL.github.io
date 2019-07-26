@@ -80,17 +80,16 @@ function animate(svg){
             //endOpacity = 1;
         }
         if(globals.percentage > 100){
+            //could change the svg here so that next one starts
             globals.percentage = 100;
             return;
             //endOpacity = 0;
         }
 
-        console.log("endo opacity ="  + endOpacity)
 
 
         time  = Math.random() * (max - min) + min;
         
-        console.log("animating element");
 
         $( this ).animate(
             {"opacity":endOpacity},
@@ -107,7 +106,6 @@ function animate(svg){
     console.log("setting time out for " + max + "millisecsongs")
     setTimeout(function(){
         globals.animating = false;
-        console.log("changed animation value to " + globals.animating);
     },max);
 
 
