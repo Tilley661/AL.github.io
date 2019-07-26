@@ -3,12 +3,12 @@ function animateSVG(svg){
     if (svg === 0 || svg === undefined){return;}
 
 
-    var el = $(`#${svg} g`);
+    var el = $(`#${svg} g, rect, path`);
     var time = 200;
     var max = 1000;
     var min = 3000;
 
-    el.css({"opacity":"1"})
+    el.css({"opacity":"0"})
     
     el.each(function(index){
 
@@ -16,7 +16,7 @@ function animateSVG(svg){
         
     
         $( this ).animate(
-            {"opacity":"0"},
+            {"opacity":"1"},
             {duration:time,
             complete:function(){
                 //do somthing on completed
