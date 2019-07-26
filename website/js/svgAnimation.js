@@ -14,20 +14,15 @@ function animateSVG(svg){
 
         time  = Math.random() * (max - min) + min;
         
-        $( this ).css({
-            "opacity":"0.5"
-        });
-
-        /*        
+    
         $( this ).animate(
-            {"opactity":"0"},
+            {"opacity":"0"},
             {duration:time,
             complete:function(){
                 //do somthing on completed
-                console.log(`after ${time/1000} seconds: completed animateion of: ${$(this)}`)
             }
         });
-        */
+    
 
     });
 }
